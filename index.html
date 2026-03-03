@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Event Tracker</h1>
+      <form id="event-form" class="event-form" novalidate>
+        <div class="field-row">
+          <label for="event-id">Event ID</label>
+          <input id="event-id" name="event-id" type="text" placeholder="e.g. EVT-1001" required />
+        </div>
+
+        <div class="field-row">
+          <label for="call-time">Call Time</label>
+          <input id="call-time" name="call-time" type="datetime-local" required />
+        </div>
+
+        <div class="field-row person-input-row">
+          <label for="person-name">Person Name</label>
+          <div class="person-controls">
+            <input id="person-name" name="person-name" type="text" placeholder="Enter person name" />
+            <button type="button" id="add-person-btn">Add Person</button>
+          </div>
+        </div>
+
+        <div id="form-message" class="form-message" aria-live="polite"></div>
+
+        <button type="submit" id="save-event-btn" class="save-btn">Save Event</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Current Person List</h2>
+      <ul id="current-person-list" class="person-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Saved Events</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Event ID</th>
+              <th>Call Time</th>
+              <th>Person List</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="saved-events-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
