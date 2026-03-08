@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Symbol Fest Registration</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Symbol Fest 2026</h1>
+      <p class="subtitle">End-Time Special Edition Event</p>
+      <p>
+        Welcome to the official page for the Symbol Fest full process. This event includes
+        technical and non-technical challenges, secure registration, and participant ID generation.
+      </p>
+      <div class="event-meta">
+        <span><strong>Event Type:</strong> Symbol-Based Campus Festival</span>
+        <span><strong>Session:</strong> Final Time Slot</span>
+        <span><strong>Date:</strong> 25 March 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container grid-layout">
+    <section class="card">
+      <h2>Event Instructions</h2>
+      <ol>
+        <li>Choose your event category: <strong>Technical</strong> or <strong>Non-Technical</strong>.</li>
+        <li>Complete all three registration steps.</li>
+        <li>Select payment option: <strong>₹250 (Technical only)</strong> or <strong>₹300 (Both events)</strong>.</li>
+        <li>Scan the payment QR, upload payment proof, and submit your details.</li>
+        <li>After successful submission, your ID is generated with prefix <code>ITDE00</code>.</li>
+      </ol>
+      <p class="note">Keep your generated ID safe. It is required for event entry verification.</p>
+    </section>
+
+    <section class="card">
+      <h2>Three-Step Registration Form</h2>
+
+      <div class="stepper" aria-label="Registration progress">
+        <span class="step active" data-step="1">Step 1: Personal</span>
+        <span class="step" data-step="2">Step 2: Event & Payment</span>
+        <span class="step" data-step="3">Step 3: Review & ID</span>
+      </div>
+
+      <form id="registrationForm" enctype="multipart/form-data">
+        <div class="form-step active" data-step="1">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" required />
+
+          <label for="year">Year</label>
+          <select id="year" name="year" required>
+            <option value="">Select year</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+          </select>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="mobile">Mobile Number</label>
+          <input id="mobile" name="mobile" type="tel" pattern="[0-9]{10}" placeholder="10-digit number" required />
+
+          <button type="button" class="btn" data-action="next">Next</button>
+        </div>
+
+        <div class="form-step" data-step="2">
+          <label for="college">College</label>
+          <input id="college" name="college" type="text" required />
+
+          <label for="eventType">Event Category</label>
+          <select id="eventType" name="eventType" required>
+            <option value="">Select category</option>
+            <option value="Technical">Technical</option>
+            <option value="Non-Technical">Non-Technical</option>
+          </select>
+
+          <label for="paymentAmount">Payment Amount Option</label>
+          <select id="paymentAmount" name="paymentAmount" required>
+            <option value="">Select payment option</option>
+            <option value="250 - Technical only">₹250 - Technical only</option>
+            <option value="300 - Both Technical & Non-Technical">₹300 - Both Technical & Non-Technical</option>
+          </select>
+
+          <div class="payment-qr-block">
+            <p class="qr-title">Payment QR Code</p>
+            <img src="payment-qr.svg" alt="Payment QR Code" class="payment-qr" />
+            <p class="note">Scan this QR to complete payment before uploading your payment screenshot.</p>
+          </div>
+
+          <label for="paymentId">Payment ID</label>
+          <input id="paymentId" name="paymentId" type="text" required />
+
+          <label for="paymentPhoto">Payment Screenshot / Photo</label>
+          <input id="paymentPhoto" name="paymentPhoto" type="file" accept="image/*" required />
+
+          <div class="actions">
+            <button type="button" class="btn secondary" data-action="prev">Back</button>
+            <button type="button" class="btn" data-action="next">Next</button>
+          </div>
+        </div>
+
+        <div class="form-step" data-step="3">
+          <h3>Review Information</h3>
+          <div id="reviewData" class="review"></div>
+
+          <div class="actions">
+            <button type="button" class="btn secondary" data-action="prev">Back</button>
+            <button type="submit" class="btn">Submit Registration</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="successBox" class="success hidden" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <h2>Organizer Access</h2>
+      <p>
+        Event organizers can view technical event participant data on a dedicated page with
+        privacy-first filtering.
+      </p>
+      <a class="link-btn" href="organizer.html">Open Organizer Dashboard</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>For safety and privacy, participant details are shown only to authorized organizers.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

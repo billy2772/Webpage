@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organizer Dashboard - Symbol Fest</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero small">
+    <div class="container">
+      <h1>Organizer Dashboard</h1>
+      <p>Technical event participant details (privacy protected view).</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Authorized Access Only</h2>
+      <p>
+        This page filters and displays only participants registered for <strong>Technical</strong>
+        events. Handle all data according to event privacy and safety standards.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Technical Participants</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Participant ID</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>College</th>
+            <th>Payment ID</th>
+          </tr>
+        </thead>
+        <tbody id="participantRows">
+          <tr>
+            <td colspan="7">No technical participants registered yet.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <a class="link-btn" href="index.html">Back to Registration</a>
+  </main>
+
+  <script src="organizer.js"></script>
+</body>
+</html>
