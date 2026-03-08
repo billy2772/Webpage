@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260" role="img" aria-label="Payment QR placeholder">
+  <rect width="260" height="260" fill="#ffffff"/>
+  <rect x="16" y="16" width="228" height="228" fill="#f8fafc" stroke="#0f172a" stroke-width="4"/>
+
+  <rect x="32" y="32" width="48" height="48" fill="#0f172a"/>
+  <rect x="180" y="32" width="48" height="48" fill="#0f172a"/>
+  <rect x="32" y="180" width="48" height="48" fill="#0f172a"/>
+
+  <rect x="100" y="40" width="12" height="12" fill="#0f172a"/>
+  <rect x="124" y="40" width="12" height="12" fill="#0f172a"/>
+  <rect x="148" y="40" width="12" height="12" fill="#0f172a"/>
+
+  <rect x="100" y="68" width="12" height="12" fill="#0f172a"/>
+  <rect x="124" y="68" width="12" height="12" fill="#0f172a"/>
+
+  <rect x="92" y="100" width="12" height="12" fill="#0f172a"/>
+  <rect x="116" y="100" width="12" height="12" fill="#0f172a"/>
+  <rect x="140" y="100" width="12" height="12" fill="#0f172a"/>
+  <rect x="164" y="100" width="12" height="12" fill="#0f172a"/>
+
+  <rect x="92" y="124" width="12" height="12" fill="#0f172a"/>
+  <rect x="116" y="124" width="12" height="12" fill="#0f172a"/>
+  <rect x="152" y="124" width="12" height="12" fill="#0f172a"/>
+
+  <rect x="92" y="148" width="12" height="12" fill="#0f172a"/>
+  <rect x="128" y="148" width="12" height="12" fill="#0f172a"/>
+  <rect x="152" y="148" width="12" height="12" fill="#0f172a"/>
+  <rect x="176" y="148" width="12" height="12" fill="#0f172a"/>
+
+  <rect x="100" y="176" width="12" height="12" fill="#0f172a"/>
+  <rect x="124" y="176" width="12" height="12" fill="#0f172a"/>
+  <rect x="148" y="176" width="12" height="12" fill="#0f172a"/>
+
+  <text x="130" y="248" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#0f172a">Scan to Pay</text>
+</svg>
